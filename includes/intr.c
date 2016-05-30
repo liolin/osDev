@@ -57,6 +57,8 @@ static uint64_t idt[IDT_ENTRIES];
 
 static void setGDTentry(int pos, unsigned int base, unsigned int limit, int flags)
 {
+  // LL ist ein suffix und steht für Long Long
+  // Erstellt so mit ein Long Long
   gdt[pos] = limit & 0xffffLL;
   gdt[pos] |= (base & 0xffffffLL) << 16;
   gdt[pos] |= (flags & 0xffLL) << 40;
