@@ -55,7 +55,7 @@ static uint64_t idt[IDT_ENTRIES];
   Set a GDT-Entry
 */
 
-static void setGDTentry(int pos, unsigned int base, unsigned int limit, int flags)
+static void setGDTentry(int pos, uint32_t base, uint32_t limit, int32_t flags)
 {
   // LL ist ein suffix und steht für Long Long
   // Erstellt so mit ein Long Long
