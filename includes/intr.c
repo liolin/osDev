@@ -146,7 +146,7 @@ void initPIC()
 #define IDT_FLAG_RING0          0x00
 #define IDT_FLAG_RING3          0x60
 
-void setIDTentry(int pos, void (*fn)(), unsigned int selector, int flags)
+void setIDTentry(int pos, void (*fn)(), uint32_t selector, int32_t flags)
 {
   unsigned long int handler = (unsigned long int)fn;
 
